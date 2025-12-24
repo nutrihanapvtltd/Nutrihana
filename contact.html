@@ -8,53 +8,64 @@
 </head>
 <body>
 
-  <header>
-    <h1>NutriHana</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>NutriHana</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
 
-  <section class="content">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Whether you’re a customer or a farmer, reach out to us below.</p>
+<section class="content">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Whether you’re a customer or a farmer, reach out to us below.</p>
 
-    <!-- Hidden iframe -->
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <!-- Hidden iframe -->
+  <iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display:none;"
+    onload="iframeLoaded()"
+  ></iframe>
 
-    <form
-      action="https://docs.google.com/forms/d/e/1FAIpQLSfnGG2sq2dBDnaxfVDJD4Dun2_UQDLSArSJqeVZyu411ijnMQ/formResponse"
-      method="POST"
-      target="hidden_iframe"
-      onsubmit="handleSubmit()"
-      class="contact-form"
-    >
-      <input type="text" name="entry.200562055" placeholder="Your Name" required>
-      <input type="email" name="entry.1045781291" placeholder="Your Email" required>
-      <input type="tel" name="entry.1065046570" placeholder="Your Mobile Number" required>
-      <textarea name="entry.839337160" placeholder="Your Message" required></textarea>
+  <form
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfnGG2sq2dBDnaxfVDJD4Dun2_UQDLSArSJqeVZyu411ijnMQ/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    class="contact-form"
+  >
+    <input type="text" name="entry.200562055" placeholder="Your Name" required>
+    <input type="email" name="entry.1045781291" placeholder="Your Email" required>
+    <input type="tel" name="entry.1065046570" placeholder="Your Mobile Number" required>
+    <textarea name="entry.839337160" placeholder="Your Message" required></textarea>
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+    <button type="submit" class="btn" onclick="submitted=true">
+      Send Message
+    </button>
+  </form>
 
-    <p id="success-message" style="display:none; color: green; margin-top: 15px;">
-      ✅ Thank you! Your message has been sent.
-    </p>
-  </section>
+  <p id="success-message" style="display:none; color: green; margin-top: 15px;">
+    ✅ Thank you! Your message has been sent.
+  </p>
+</section>
 
-  <footer>
-    <p>© 2025 NutriHana. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2025 NutriHana. All rights reserved.</p>
+</footer>
 
-  <script>
-    function handleSubmit() {
+<script>
+  let submitted = false;
+
+  function iframeLoaded() {
+    if (submitted) {
       document.getElementById("success-message").style.display = "block";
       document.querySelector(".contact-form").reset();
+      submitted = false;
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
