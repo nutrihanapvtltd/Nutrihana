@@ -73,6 +73,17 @@ nav a.active {
   max-width: 500px;
   margin: 30px auto;
 }
+.contact-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-wrapper h2,
+.contact-wrapper p {
+  margin-left: 0;
+}
+
 
 input, textarea {
   padding: 10px;
