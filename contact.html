@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="wrapper"> <!-- Added wrapper for sticky footer -->
 
 <header>
   <h1>Nutrihana</h1>
@@ -18,7 +19,7 @@
   </nav>
 </header>
 
-<section class="content">
+<main class="content">
   <div class="contact-container">
 
     <!-- LEFT: Contact Details -->
@@ -72,6 +73,19 @@
           </p>
         </div>
       </div>
+
+      <!-- NEW: Follow us on Instagram -->
+      <div class="contact-item instagram">
+        <span class="icon"></span>
+        <div>
+          <strong>Instagram</strong>
+          <p>
+            <a href="https://www.instagram.com/nutrihanaa" target="_blank">
+              Follow us on Instagram @nutrihanaa
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- RIGHT: Contact Form -->
@@ -113,7 +127,7 @@
 
     </div>
   </div>
-</section>
+</main>
 
 <footer>
   <p>© 2025 Nutrihana. All rights reserved.</p>
@@ -130,6 +144,6 @@
     }
   }
 </script>
-
+</div> <!-- End wrapper -->
 </body>
 </html>
