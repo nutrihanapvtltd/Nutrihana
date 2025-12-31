@@ -18,50 +18,105 @@
   </nav>
 </header>
 
-  <section class="content">
-    <div class="contact-wrapper">
+<section class="content">
+  <div class="contact-container">
+
+    <!-- LEFT: Contact Details -->
+    <div class="contact-info-box">
       <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Whether you’re a customer or a farmer, reach out to us below.</p>
-    
-      <!-- Hidden iframe to stop redirect -->
+      <p>We’d love to hear from you. Reach out using the details below.</p>
+
+      <div class="contact-item">
+        <span class="icon phone"></span>
+        <div>
+          <strong>Mobile</strong>
+          <p>+91 62522 18932, 9773524747</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon email"></span>
+        <div>
+          <strong>Email</strong>
+          <p>
+            <a href="mailto:contact@nutrihana.in">contact@nutrihana.in</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon address"></span>
+        <div>
+          <strong>Registered Address</strong>
+          <p>
+            Nutrihana Pvt. Ltd.<br>
+            H. No. 248, Nala Road,<br>
+            Patna, Bihar – 800003<br>
+            India
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-item whatsapp">
+        <span class="icon whatsapp"></span>
+        <div>
+          <strong>WhatsApp</strong>
+          <p>
+            <a
+              href="https://wa.me/916352218932"
+              target="_blank"
+              class="whatsapp-link"
+            >
+              Chat with us on WhatsApp
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Contact Form -->
+    <div class="contact-form-box">
+
+      <!-- Hidden iframe -->
       <iframe
         name="hidden_iframe"
         id="hidden_iframe"
         style="display:none;"
         onload="iframeLoaded()"
       ></iframe>
-    
+
       <form
         action="https://docs.google.com/forms/d/e/1FAIpQLSfnGG2sq2dBDnaxfVDJD4Dun2_UQDLSArSJqeVZyu411ijnMQ/formResponse"
         method="POST"
         target="hidden_iframe"
         class="contact-form"
       >
-        <!-- REQUIRED hidden fields for Google Forms -->
+        <h2>Send Us a Message</h2>
+
         <input type="hidden" name="fvv" value="1">
         <input type="hidden" name="pageHistory" value="0">
         <input type="hidden" name="fbzx" value="-123456789">
-    
-        <!-- Your fields -->
+
         <input type="text" name="entry.2005620554" placeholder="Your Name" required>
         <input type="email" name="entry.1045781291" placeholder="Your Email" required>
         <input type="tel" name="entry.1065046570" placeholder="Your Mobile Number" required>
         <textarea name="entry.839337160" placeholder="Your Message" required></textarea>
-    
+
         <button type="submit" class="btn" onclick="submitted=true">
           Send Message
         </button>
       </form>
-    
-      <!-- Success message -->
+
       <p id="success-message" style="display:none; color: green; margin-top: 15px;">
-        ✅ Thank you! Message has been sent. We will contact you shortly.
+        ✅ Thank you! Message has been sent.
       </p>
+
     </div>
-  </section>
+  </div>
+</section>
 
 <footer>
-  <p>© 2025 NutriHana. All rights reserved.</p>
+  <p>© 2025 Nutrihana. All rights reserved.</p>
 </footer>
 
 <script>
